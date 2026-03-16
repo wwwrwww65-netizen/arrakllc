@@ -949,6 +949,34 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
 }
 
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.payment-img {
+    height: 30px;
+    object-fit: contain;
+    background: white;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
 .footer-bottom {
     text-align: center;
     border-top: 1px solid var(--border-color);
@@ -966,6 +994,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-muted);
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-bottom: 15px;
 }
