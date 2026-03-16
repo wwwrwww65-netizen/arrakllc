@@ -473,21 +473,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Installments Section */
 .installments-section {
+    padding: 20px 0; /* Removing side padding to allow h-scroll edge-to-edge */
+    margin-bottom: 20px;
+}
+
+.installments-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background: var(--bg-surface);
-    padding: 20px;
-    border-radius: var(--radius-sm);
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+    padding: 0 16px;
+    margin-bottom: 15px;
 }
 
 .installments-title {
     color: white;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 800;
 }
 
 .installments-logos {
@@ -496,20 +497,150 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .installment-badge {
-    padding: 5px 15px;
+    padding: 3px 10px;
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
 .installment-badge.tamara {
     background: #ffab91;
-    color: #6d4c41;
+    color: #4e342e;
 }
 
 .installment-badge.tabby {
     background: #00ffa5;
     color: #0b1a20;
+}
+
+.installments-games-scroll {
+    padding: 0 16px;
+    gap: 12px;
+}
+
+.inst-game-card {
+    min-width: 90px;
+    width: 90px;
+    height: 120px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-surface);
+}
+
+.inst-game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inst-badges {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.inst-badges span {
+    font-size: 0.5rem;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.bg-tamara {
+    background: #ffab91;
+    color: #4e342e;
+}
+
+.bg-tabby {
+    background: #00ffa5;
+    color: #0b1a20;
+}
+
+/* Games Top-up Section (شحن الالعاب) */
+.games-topup-section {
+    position: relative;
+    padding: 20px 16px 40px;
+}
+
+/* Decorative String Lights using radial-gradients/box-shadows for a pure CSS effect */
+.string-lights {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: 
+      radial-gradient(circle at 10% 20%, #ffde59 8px, transparent 10px),
+      radial-gradient(circle at 30% 30%, #ffde59 6px, transparent 8px),
+      radial-gradient(circle at 50% 15%, #ffde59 10px, transparent 12px),
+      radial-gradient(circle at 70% 35%, #ffde59 7px, transparent 9px),
+      radial-gradient(circle at 90% 25%, #ffde59 9px, transparent 11px);
+    background-size: 100% 50px;
+    opacity: 0.8;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Simulated connecting lines */
+.string-lights::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.topup-title-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.topup-title {
+    background: linear-gradient(90deg, #103ce7, #06b6d4);
+    color: white;
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+}
+
+.games-grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.game-sq {
+    aspect-ratio: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;
+    background: var(--bg-surface-light);
+    transition: transform 0.2s;
+}
+
+.game-sq:hover {
+    transform: scale(1.05);
+}
+
+.game-sq img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Products Section */
