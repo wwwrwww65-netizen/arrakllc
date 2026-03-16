@@ -2,225 +2,297 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تيك كارد - نموذج التصميم</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>تيك كارد - تصميم مطابق</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Salla uses fonts similar to Tajawal, Almarai, or Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="container nav-content">
+    <!-- Background Glow Effects -->
+    <div class="bg-glow top-glow"></div>
+    <div class="bg-glow mid-glow"></div>
+
+    <!-- Mobile-First Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <button class="icon-btn menu-btn"><i class="fa-solid fa-bars"></i></button>
             <div class="logo">
                 <span class="logo-text">ARRAK <span class="highlight">LLC</span></span>
             </div>
-            
-            <div class="search-bar">
-                <input type="text" placeholder="عن ماذا تبحث؟">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="header-actions">
+                <button class="icon-btn"><i class="fa-regular fa-user"></i></button>
+                <button class="icon-btn cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">0</span>
+                </button>
             </div>
-
-            <nav class="nav-links">
-                <a href="#" class="nav-item"><i class="fa-regular fa-user"></i> دخول</a>
-                <a href="#" class="nav-item cart-btn">
-                    <i class="fa-solid fa-cart-shopping"></i> السلة
-                    <span class="cart-badge">0</span>
-                </a>
-            </nav>
+        </div>
+        <div class="container">
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="ابحث عن منتج، تصنيف...">
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>أفضل بطاقات الألعاب والاشتراكات</h1>
-                <p>تسوق الآن واحصل على بطاقتك في ثوانٍ. أسعار منافسة وتسليم فوري!</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">تصفح المنتجات</a>
-                    <a href="#offers" class="btn btn-secondary">أحدث العروض</a>
+    <main>
+        <!-- Top Banners Slider -->
+        <section class="banner-slider-section">
+            <div class="banner-slider">
+                <!-- Banner 1 -->
+                <div class="banner-slide" style="background: linear-gradient(135deg, #1f104d, #421886);">
+                    <div class="banner-content">
+                        <h2>التحدي بدأ !</h2>
+                        <p>كن الأقوى بالالماسات الان</p>
+                        <button class="btn-sm">اشحنها الان</button>
+                    </div>
+                </div>
+                <!-- Banner 2 -->
+                <div class="banner-slide" style="background: linear-gradient(135deg, #091325, #112d5e);">
+                    <div class="banner-content">
+                        <h2>عروض حصرية</h2>
+                        <p>احصل على أفضل الأسعار يوميا</p>
+                        <button class="btn-sm">اكتشف المزيد</button>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <!-- Decorative Elements -->
-                <div class="glass-card decor-card">
-                    <i class="fa-brands fa-playstation"></i>
-                    <span>بطاقات بلايستيشن</span>
-                </div>
-                <div class="glass-card decor-card delay-1">
-                    <i class="fa-brands fa-xbox"></i>
-                    <span>إكس بوكس</span>
-                </div>
-                <div class="glass-card decor-card delay-2">
-                    <i class="fa-brands fa-apple"></i>
-                    <span>أيتونز</span>
-                </div>
-                <div class="glow-bg"></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Categories Section -->
-    <section class="categories container">
-        <h2 class="section-title">التصنيفات <span class="highlight">الرئيسية</span></h2>
-        <div class="grid categories-grid">
-            <div class="category-card">
-                <i class="fa-brands fa-steam"></i>
-                <span>ستيم</span>
+        <!-- Categories Horizontal Scroll -->
+        <section class="categories-scroll-section container">
+            <div class="h-scroll-container">
+                <div class="category-item-sq">
+                    <div class="cat-icon" style="background:#5c24ff;"><i class="fa-brands fa-playstation"></i></div>
+                    <span>بلايستيشن</span>
+                </div>
+                <div class="category-item-sq">
+                    <div class="cat-icon" style="background:#00d2ff;"><i class="fa-brands fa-apple"></i></div>
+                    <span>أبل</span>
+                </div>
+                <div class="category-item-sq">
+                    <div class="cat-icon" style="background:#10b981;"><i class="fa-brands fa-xbox"></i></div>
+                    <span>اكس بوكس</span>
+                </div>
+                <div class="category-item-sq">
+                    <div class="cat-icon" style="background:#f59e0b;"><i class="fa-solid fa-gamepad"></i></div>
+                    <span>جوجل بلاي</span>
+                </div>
+                <div class="category-item-sq">
+                    <div class="cat-icon" style="background:#ef4444;"><i class="fa-brands fa-steam"></i></div>
+                    <span>ستيم</span>
+                </div>
+                <div class="category-item-sq">
+                    <div class="cat-icon" style="background:#8b5cf6;"><i class="fa-solid fa-gift"></i></div>
+                    <span>بطاقات هدايا</span>
+                </div>
             </div>
-            <div class="category-card">
-                <i class="fa-brands fa-playstation"></i>
-                <span>بلايستيشن</span>
-            </div>
-            <div class="category-card">
-                <i class="fa-brands fa-xbox"></i>
-                <span>إكس بوكس</span>
-            </div>
-            <div class="category-card">
-                <i class="fa-brands fa-apple"></i>
-                <span>أيتونز</span>
-            </div>
-            <div class="category-card">
-                <i class="fa-brands fa-google-play"></i>
-                <span>جوجل بلاي</span>
-            </div>
-            <div class="category-card">
-                <i class="fa-solid fa-gamepad"></i>
-                <span>ريزر جولد</span>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products container">
-        <h2 class="section-title">الأكثر <span class="highlight">مبيعاً</span></h2>
-        <div class="grid products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-badge">خصم 10%</div>
-                <div class="product-image">
-                    <i class="fa-brands fa-playstation product-icon"></i>
-                </div>
-                <div class="product-info">
-                    <h3>بطاقة بلايستيشن ستور سعودي $20</h3>
-                    <p class="category-name">بلايستيشن</p>
-                    <div class="price-container">
-                        <span class="old-price">80 ر.س</span>
-                        <span class="price">72 ر.س</span>
-                    </div>
-                    <button class="btn btn-primary w-100">
-                        <i class="fa-solid fa-cart-plus"></i> إضافة للسلة
-                    </button>
-                </div>
+        <!-- Full Width Offer Banner -->
+        <section class="full-banner">
+            <div class="banner-inner">
+                <h2>عرض زينا لايف</h2>
             </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <i class="fa-brands fa-apple product-icon apple-icon"></i>
-                </div>
-                <div class="product-info">
-                    <h3>أيتونز أمريكي $10</h3>
-                    <p class="category-name">أيتونز</p>
-                    <div class="price-container">
-                        <span class="price">38 ر.س</span>
-                    </div>
-                    <button class="btn btn-primary w-100">
-                        <i class="fa-solid fa-cart-plus"></i> إضافة للسلة
-                    </button>
-                </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <i class="fa-solid fa-gamepad product-icon pubg-icon"></i>
-                </div>
-                <div class="product-info">
-                    <h3>شدات ببجي 660 UC</h3>
-                    <p class="category-name">ألعاب</p>
-                    <div class="price-container">
-                        <span class="price">40 ر.س</span>
-                    </div>
-                    <button class="btn btn-primary w-100">
-                        <i class="fa-solid fa-cart-plus"></i> إضافة للسلة
-                    </button>
-                </div>
-            </div>
-             <!-- Product 4 -->
-             <div class="product-card">
-                <div class="product-image">
-                    <i class="fa-brands fa-steam product-icon steam-icon"></i>
-                </div>
-                <div class="product-info">
-                    <h3>ستيم تركي 100 TL</h3>
-                    <p class="category-name">ستيم</p>
-                    <div class="price-container">
-                        <span class="price">25 ر.س</span>
-                    </div>
-                    <button class="btn btn-primary w-100">
-                        <i class="fa-solid fa-cart-plus"></i> إضافة للسلة
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/" class="whatsapp-float">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+        <!-- Best Sellers Grid -->
+        <section class="products-section container">
+            <div class="section-header">
+                <h2 class="section-title">الأكثر مبيعاً</h2>
+                <a href="#" class="view-all">عرض الكل <i class="fa-solid fa-angle-left"></i></a>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <div class="discount-badge">-15%</div>
+                        <i class="fa-brands fa-playstation placeholder-icon" style="color:#5c24ff;"></i>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">بطاقة بلايستيشن 50$ سعودي</h3>
+                        <div class="product-price">
+                            <span class="old-price">190 ر.س</span>
+                            <span class="new-price">180 ر.س</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-arrow-down"></i> إضافة للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <i class="fa-brands fa-apple placeholder-icon" style="color:#00d2ff;"></i>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">ايتونز امريكي 20$</h3>
+                        <div class="product-price">
+                            <span class="new-price">75 ر.س</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-arrow-down"></i> إضافة للسلة
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <i class="fa-solid fa-gamepad placeholder-icon" style="color:#f59e0b;"></i>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">شدات ببجي 325 UC</h3>
+                        <div class="product-price">
+                            <span class="new-price">20 ر.س</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-arrow-down"></i> إضافة للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <i class="fa-brands fa-steam placeholder-icon" style="color:#ef4444;"></i>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">ستيم تركي 200 TL</h3>
+                        <div class="product-price">
+                            <span class="new-price">45 ر.س</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-arrow-down"></i> إضافة للسلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Break Banner -->
+        <section class="promo-banner container">
+            <div class="promo-inner">
+                <div class="promo-text">
+                    <h2>لا توقف مشاهدة</h2>
+                    <p>اطلب و استمتع باستخدام برامجك المفضلة بأسعار حصرية</p>
+                    <a href="#" class="promo-link">اكتشف المزيد <i class="fa-solid fa-angle-left"></i></a>
+                </div>
+            </div>
+        </section>
+
+         <!-- Software Keys Grid -->
+         <section class="products-section container">
+            <div class="section-header">
+                <h2 class="section-title">الاكثر مبيعاً في مفاتيح البرامج</h2>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <i class="fa-brands fa-windows placeholder-icon" style="color:#00a4ef;"></i>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">مفتاح ويندوز 11 برو</h3>
+                        <div class="product-price">
+                            <span class="new-price">39 ر.س</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-arrow-down"></i> إضافة للسلة
+                        </button>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <i class="fa-solid fa-shield-halved placeholder-icon" style="color:#fff;"></i>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">كاسبرسكاي انترنت سكيورتي</h3>
+                        <div class="product-price">
+                            <span class="new-price">55 ر.س</span>
+                        </div>
+                        <button class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-arrow-down"></i> إضافة للسلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Mobile Bottom Nav (Optional but common in Salla) -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-border-all"></i>
+            <span>الأقسام</span>
+        </a>
+        <a href="#" class="nav-item cart-btn-nav">
+            <div class="nav-icon-wrapper">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="nav-badge">0</span>
+            </div>
+            <span>السلة</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-regular fa-user"></i>
+            <span>حسابي</span>
+        </a>
+    </nav>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <div class="logo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
                     <span class="logo-text">ARRAK <span class="highlight">LLC</span></span>
                 </div>
-                <p>متجرك الأول لجميع البطاقات الرقمية والاشتراكات. تسليم فوري، أمان تام، وأسعار لا تقبل المنافسة.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
                     <a href="#"><i class="fa-brands fa-snapchat"></i></a>
                     <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
-            <div class="footer-col">
-                <h3>روابط هامة</h3>
-                <ul>
-                    <li><a href="#">الرئيسية</a></li>
-                    <li><a href="#">جميع المنتجات</a></li>
-                    <li><a href="#">العروض</a></li>
-                    <li><a href="#">كيف تشتري؟</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>المساعدة والدعم</h3>
-                <ul>
-                    <li><a href="#">اتصل بنا</a></li>
-                    <li><a href="#">الأسئلة الشائعة</a></li>
+            <div class="footer-middle">
+                <h3>روابط مهمة</h3>
+                <ul class="footer-links">
+                    <li><a href="#">من نحن</a></li>
                     <li><a href="#">سياسة الخصوصية</a></li>
-                    <li><a href="#">شروط الاستخدام</a></li>
+                    <li><a href="#">الشروط والاحكام</a></li>
+                    <li><a href="#">الاستبدال والاسترجاع</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h3>طرق الدفع</h3>
+            <div class="footer-bottom">
+                <div class="tax-info">
+                    <p>الرقم الضريبي: 311122233300003</p>
+                </div>
                 <div class="payment-methods">
                     <i class="fa-brands fa-cc-visa"></i>
                     <i class="fa-brands fa-cc-mastercard"></i>
-                    <i class="fa-brands fa-cc-paypal"></i>
                     <i class="fa-brands fa-cc-apple-pay"></i>
                 </div>
+                <p class="copyright">صنع بحب 💙 بواسطة Arrak LLC</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Arrak LLC. جميع الحقوق محفوظة.</p>
-        </div>
     </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
