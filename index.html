@@ -17,6 +17,29 @@
     <div class="bg-glow top-glow"></div>
     <div class="bg-glow mid-glow"></div>
 
+    <!-- Side Menu -->
+    <div class="side-menu-overlay" id="menuOverlay"></div>
+    <nav class="side-menu" id="sideMenu">
+        <div class="sm-header">
+            <div class="logo">
+                <span class="logo-text">ARRAK <span class="highlight">LLC</span></span>
+            </div>
+            <button class="sm-close" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="sm-links">
+            <a href="index.html" class="sm-link"><i class="fa-solid fa-house"></i> الرئيسية</a>
+            <a href="categories.html" class="sm-link"><i class="fa-solid fa-border-all"></i> الأقسام</a>
+            <a href="product.html" class="sm-link"><i class="fa-solid fa-fire"></i> أحدث العروض</a>
+            <a href="cart.html" class="sm-link"><i class="fa-solid fa-cart-shopping"></i> سلة المشتريات</a>
+            <a href="account.html" class="sm-link"><i class="fa-regular fa-user"></i> حسابي</a>
+        </div>
+    </nav>
+    
+    <!-- Toast -->
+    <div class="toast" id="cartToast">
+        <i class="fa-solid fa-circle-check"></i> تم إضافة المنتج بنجاح!
+    </div>
+
     <!-- Mobile-First Header -->
     <header class="header">
         <div class="container header-inner">
@@ -152,23 +175,23 @@
             </div>
             
             <div class="h-scroll-container installments-games-scroll">
-                <div class="inst-game-card">
+                <div class="inst-game-card" onclick="window.location.href='game.html';" style="cursor: pointer;">
                     <img src="https://cdn.salla.sa/form-builder/0g0huFYTMdfy4WucpFHfEjvxZKufwBUXt6O42hH9.png" onerror="this.onerror=null;this.src='https://placehold.co/150x200/2a1b54/FFF?text=Game';" alt="Mobile Legends">
                     <div class="inst-badges"><span class="bg-tamara">تمارا</span><span class="bg-tabby">tabby</span></div>
                 </div>
-                <div class="inst-game-card">
+                <div class="inst-game-card" onclick="window.location.href='game.html';" style="cursor: pointer;">
                     <img src="https://cdn.salla.sa/form-builder/LtJJUWAGCriZwlKy9THvWsiplaQMfTtPLLgxwgiL.png" onerror="this.onerror=null;this.src='https://placehold.co/150x200/2a1b54/FFF?text=Game';" alt="Call of Duty Mobile">
                     <div class="inst-badges"><span class="bg-tamara">تمارا</span><span class="bg-tabby">tabby</span></div>
                 </div>
-                <div class="inst-game-card">
+                <div class="inst-game-card" onclick="window.location.href='game.html';" style="cursor: pointer;">
                     <img src="https://cdn.salla.sa/form-builder/Nmj2aREvQ0bOornuTCmC7cxnSUJdI1mHRl6jXGXj.png" onerror="this.onerror=null;this.src='https://placehold.co/150x200/2a1b54/FFF?text=Game';" alt="Genshin Impact">
                     <div class="inst-badges"><span class="bg-tamara">تمارا</span><span class="bg-tabby">tabby</span></div>
                 </div>
-                <div class="inst-game-card">
+                <div class="inst-game-card" onclick="window.location.href='game.html';" style="cursor: pointer;">
                     <img src="https://cdn.salla.sa/form-builder/EVUL2ZLeG3B3lE1zuhNK6YYGqONkEPdUb5vgv80c.png" onerror="this.onerror=null;this.src='https://placehold.co/150x200/2a1b54/FFF?text=Game';" alt="Yalla Ludo">
                     <div class="inst-badges"><span class="bg-tamara">تمارا</span><span class="bg-tabby">tabby</span></div>
                 </div>
-                <div class="inst-game-card">
+                <div class="inst-game-card" onclick="window.location.href='game.html';" style="cursor: pointer;">
                     <img src="https://cdn.salla.sa/form-builder/dediRZdw9UyWrXxuSo1wtOiSjjmFgg8oq08x1NTt.png" onerror="this.onerror=null;this.src='https://placehold.co/150x200/2a1b54/FFF?text=Game';" alt="PUBG Mobile">
                     <div class="inst-badges"><span class="bg-tamara">تمارا</span><span class="bg-tabby">tabby</span></div>
                 </div>
@@ -183,17 +206,17 @@
             </div>
             
             <div class="games-grid-3x3">
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/LtJJUWAGCriZwlKy9THvWsiplaQMfTtPLLgxwgiL.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Call of Duty"></a>
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/EVUL2ZLeG3B3lE1zuhNK6YYGqONkEPdUb5vgv80c.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Yalla Ludo"></a>
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/dediRZdw9UyWrXxuSo1wtOiSjjmFgg8oq08x1NTt.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="PUBG"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/LtJJUWAGCriZwlKy9THvWsiplaQMfTtPLLgxwgiL.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Call of Duty"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/EVUL2ZLeG3B3lE1zuhNK6YYGqONkEPdUb5vgv80c.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Yalla Ludo"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/dediRZdw9UyWrXxuSo1wtOiSjjmFgg8oq08x1NTt.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="PUBG"></a>
                 
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/JwJzyyKOtJjGB7HcKBZlmIZ828nNTC1EkFRiJyA0.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Whiteout Survival"></a>
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/E87EKfRLmNTwQlVRMZkT7ccIH3xGTRMmUcLvoU4G.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Roblox"></a>
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/0g0huFYTMdfy4WucpFHfEjvxZKufwBUXt6O42hH9.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Mobile Legends"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/JwJzyyKOtJjGB7HcKBZlmIZ828nNTC1EkFRiJyA0.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Whiteout Survival"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/E87EKfRLmNTwQlVRMZkT7ccIH3xGTRMmUcLvoU4G.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Roblox"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/0g0huFYTMdfy4WucpFHfEjvxZKufwBUXt6O42hH9.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Mobile Legends"></a>
                 
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/GzjDgwhgXSPsBYxs2fQuACs7A191TqfuL1evjDpq.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Jawaker"></a>
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/m5Nwi0uSx6isykFz6egK9ZpuMzEDJ3GUEhUH3i2f.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="FIFA"></a>
-                <a href="#" class="game-sq"><img src="https://cdn.salla.sa/form-builder/xcSzSOtOsRkmjNd5clo4vSAqVCPscUH3gjbCBo3b.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Free Fire"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/GzjDgwhgXSPsBYxs2fQuACs7A191TqfuL1evjDpq.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Jawaker"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/m5Nwi0uSx6isykFz6egK9ZpuMzEDJ3GUEhUH3i2f.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="FIFA"></a>
+                <a href="game.html" class="game-sq"><img src="https://cdn.salla.sa/form-builder/xcSzSOtOsRkmjNd5clo4vSAqVCPscUH3gjbCBo3b.png" onerror="this.onerror=null;this.src='https://placehold.co/200x200/1c1538/FFF?text=Game';" alt="Free Fire"></a>
             </div>
         </section>
 
