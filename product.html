@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>تيك كارد - اشتراك واتش ات Watch IT</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="product-page-body">
+    <!-- Background Glow Effects -->
+    <div class="bg-glow top-glow"></div>
+    <div class="bg-glow mid-glow"></div>
+
+    <!-- Mobile-First Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="icon-btn back-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            <div class="logo">
+                <span class="logo-text">ARRAK <span class="highlight">LLC</span></span>
+            </div>
+            <div class="header-actions">
+                <a href="cart.html" class="icon-btn cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-main container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="index.html">الرئيسية</a>
+            <i class="fa-solid fa-angle-left"></i>
+            <a href="#">بطاقات البث</a>
+            <i class="fa-solid fa-angle-left"></i>
+            <span>اشتراك واتش ات Watch IT</span>
+        </nav>
+
+        <div class="product-layout">
+            <!-- Product Image Side -->
+            <div class="product-gallery">
+                <div class="main-image-glass">
+                    <img src="https://cdn.salla.sa/form-builder/0g0huFYTMdfy4WucpFHfEjvxZKufwBUXt6O42hH9.png" onerror="this.src='https://placehold.co/400x400/2a1b54/FFF?text=Watch+IT';" alt="Watch IT Subscription" class="p-img" id="mainProdImage">
+                    <div class="glass-badge discount">تخفيض !</div>
+                    <div class="glass-badge instant"><i class="fa-solid fa-bolt"></i> تسليم فوري</div>
+                </div>
+            </div>
+
+            <!-- Product Details Side -->
+            <div class="product-info-glass">
+                <h1 class="p-title">اشتراك واتش ات Watch IT | أعلى باقة (VIP)</h1>
+                <div class="p-meta">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span>(128 تقييم)</span>
+                    </div>
+                    <div class="sales-count"><i class="fa-solid fa-fire-flame-curved"></i> تم شراءه أكثر من 500 مرة</div>
+                </div>
+
+                <div class="p-pricing">
+                    <div class="p-price-block">
+                        <span class="p-new-price" id="displayPrice">85 ر.س</span>
+                        <span class="p-old-price" id="displayOldPrice">120 ر.س</span>
+                    </div>
+                    <div class="tabby-tamara-promo">
+                        <img src="images.png" alt="NeoLeap" class="p-promo-logo">
+                        <span>أو قسمها على 4 دفعات بدون فوائد!</span>
+                    </div>
+                </div>
+
+                <!-- Product Options -->
+                <div class="p-options">
+                    <h3 class="opt-title">اختر مدة الاشتراك</h3>
+                    <div class="opt-grid">
+                        <label class="opt-box">
+                            <input type="radio" name="duration" value="1month" onclick="updatePrice('35', '50')" checked>
+                            <span class="opt-inner">
+                                <span class="opt-name">شهر واحد</span>
+                                <span class="opt-price">35 ر.س</span>
+                            </span>
+                        </label>
+                        <label class="opt-box">
+                            <input type="radio" name="duration" value="3months" onclick="updatePrice('85', '120')">
+                            <span class="opt-inner">
+                                <span class="opt-name">3 شهور</span>
+                                <span class="opt-price">85 ر.س</span>
+                            </span>
+                        </label>
+                        <label class="opt-box">
+                            <input type="radio" name="duration" value="12months" onclick="updatePrice('199', '299')">
+                            <span class="opt-inner">
+                                <span class="opt-name">سنة كاملة</span>
+                                <span class="opt-price">199 ر.س</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Add to cart Area (Desktop mostly, replicated on mobile sticky) -->
+                <div class="p-actions desktop-actions">
+                    <div class="qty-selector">
+                        <button class="qty-btn minus" onclick="modQty(-1)"><i class="fa-solid fa-minus"></i></button>
+                        <input type="number" id="qtyInput" value="1" min="1" readonly>
+                        <button class="qty-btn plus" onclick="modQty(1)"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <button class="btn-primary bulk-add-btn">
+                        <i class="fa-solid fa-cart-arrow-down"></i> أضف للسلة
+                    </button>
+                </div>
+                
+                <div class="p-featuresList">
+                    <div class="f-item"><i class="fa-solid fa-bolt-lightning text-yellow"></i> استلام كود التفعيل فوراً بعد الدفع</div>
+                    <div class="f-item"><i class="fa-solid fa-shield-halved text-green"></i> ضمان طوال فترة الاشتراك</div>
+                    <div class="f-item"><i class="fa-solid fa-headset text-blue"></i> دعم فني متاح 24/7 لمساعدتك</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Description Tabs -->
+        <div class="product-tabs-container">
+            <div class="tabs-header">
+                <button class="tab-link active" onclick="openTab(event, 'desc')">وصف المنتج</button>
+                <button class="tab-link" onclick="openTab(event, 'how')">طريقة التفعيل</button>
+            </div>
+            <div id="desc" class="tab-content active">
+                <p>استمتع بأفضل المسلسلات والأفلام العربية الحصرية مع اشتراك <strong>Watch IT VIP</strong> الأقوى على الإطلاق.</p>
+                <ul>
+                    <li>حساب بملفك الخاص لتجربة مشاهدة لا مثيل لها.</li>
+                    <li>لا توجد أي إعلانات مزعجة.</li>
+                    <li>جودة مشاهدة فائقة الدقة 4K.</li>
+                    <li>ضمان ذهبي لاستمرارية الحساب.</li>
+                </ul>
+            </div>
+            <div id="how" class="tab-content">
+                <p>خطوات تفعيل اشتراك واتش ات بسرعة وسهولة:</p>
+                <ol>
+                    <li>بعد إتمام الدفع، ستستلم كود التفعيل فوراً في صفحة الطلب وبريدك الإلكتروني.</li>
+                    <li>قم بزيارة موقع Watch IT الرسمي.</li>
+                    <li>سجل الدخول أو أنشئ حساباً جديداً.</li>
+                    <li>اذهب إلى إعدادات الحساب ثم "تفعيل كود الخصم".</li>
+                    <li>أدخل الكود واستمتع بالمشاهدة!</li>
+                </ol>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sticky Bottom Bar Mobile -->
+    <div class="mobile-sticky-checkout">
+        <div class="sticky-price">
+            <span class="sp-lbl">الإجمالي:</span>
+            <span class="sp-val" id="stickyTotal">35 ر.س</span>
+        </div>
+        <button class="btn-primary bulk-add-btn sticky-btn">
+            <i class="fa-solid fa-cart-arrow-down"></i> أضف للسلة
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding-bottom: 90px;"> <!-- Padding for sticky bar -->
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span class="logo-text">ARRAK <span class="highlight">LLC</span></span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 20px;">
+                <p class="copyright">صنع بحب 💙 بواسطة Arrak LLC</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts specifically for Product Page -->
+    <script>
+        // Quantity modifier
+        function modQty(change) {
+            let input = document.getElementById('qtyInput');
+            let val = parseInt(input.value) + change;
+            if (val >= 1) {
+                input.value = val;
+                updateTotal();
+            }
+        }
+
+        // Price updater based on selection
+        let currentPrice = 35;
+        function updatePrice(newP, oldP) {
+            document.getElementById('displayPrice').innerText = newP + ' ر.س';
+            document.getElementById('displayOldPrice').innerText = oldP + ' ر.س';
+            currentPrice = parseFloat(newP);
+            updateTotal();
+
+            // Add simple flash animation
+            const priceBlock = document.querySelector('.p-price-block');
+            priceBlock.style.transform = 'scale(1.1)';
+            setTimeout(() => priceBlock.style.transform = 'scale(1)', 200);
+        }
+
+        function updateTotal() {
+            let qty = parseInt(document.getElementById('qtyInput').value);
+            let total = (currentPrice * qty).toFixed(2);
+            document.getElementById('stickyTotal').innerText = total + ' ر.س';
+        }
+
+        // Tabs logic
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

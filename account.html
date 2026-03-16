@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>تيك كارد - حسابي</title>
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .profile-header { display: flex; align-items: center; gap: 20px; background: var(--bg-surface); padding: 25px 20px; border-radius: var(--radius-lg); margin: 20px 0; border: 1px solid rgba(255,255,255,0.05); }
+        .avatar-wrap { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #06b6d4, #103ce7); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; position: relative; }
+        .avatar-wrap img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+        .vip-badge { position: absolute; bottom: 0; right: -5px; background: #facc15; color: #000; font-size: 0.7rem; font-weight: bold; padding: 2px 8px; border-radius: 10px; }
+        .user-info h2 { font-size: 1.3rem; color: white; margin-bottom: 5px; }
+        .user-info p { color: var(--text-muted); font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+        .wallet-card { background: linear-gradient(135deg, #1f104d, #421886); border-radius: var(--radius-lg); padding: 20px; color: white; margin-bottom: 25px; box-shadow: 0 10px 25px rgba(66, 24, 134, 0.4); display: flex; justify-content: space-between; align-items: center; }
+        .w-amount { font-size: 2rem; font-weight: 800; margin-top: 5px; display: block; }
+        .w-lbl { font-size: 0.9rem; opacity: 0.8; }
+        .menu-list { background: var(--bg-surface); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.05); }
+        .menu-item { display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); color: white; text-decoration: none; font-size: 1.05rem; transition: background 0.2s; }
+        .menu-item:hover { background: rgba(255,255,255,0.02); }
+        .menu-item:last-child { border-bottom: none; }
+        .mi-left { display: flex; align-items: center; gap: 15px; }
+        .mi-icon { width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.2rem; }
+        .mi-left span { font-weight: 500; }
+        .menu-item.logout { color: #f87171; }
+        .menu-item.logout .mi-icon { color: #f87171; background: rgba(248, 113, 113, 0.1); }
+    </style>
+</head>
+<body>
+    <div class="bg-glow top-glow"></div>
+    <div class="bg-glow mid-glow" style="top: 50%;"></div>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="icon-btn menu-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            <div class="logo">
+                <span class="logo-text">ARRAK <span class="highlight">LLC</span></span>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn"><i class="fa-solid fa-gear"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-bottom: 100px; margin-top: 10px;">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="avatar-wrap">
+                <i class="fa-solid fa-user"></i>
+                <div class="vip-badge">VIP</div>
+            </div>
+            <div class="user-info">
+                <h2>أهلاً، زبوننا المميز</h2>
+                <p><i class="fa-solid fa-phone"></i> +9665XXXXXXX</p>
+            </div>
+        </div>
+
+        <!-- Wallet Card -->
+        <div class="wallet-card">
+            <div>
+                <span class="w-lbl">رصيد المحفظة</span>
+                <span class="w-amount">150.00 <span style="font-size:1rem;">ر.س</span></span>
+            </div>
+            <div style="font-size:2.5rem; opacity:0.2;"><i class="fa-solid fa-wallet"></i></div>
+        </div>
+
+        <!-- Menu List -->
+        <div class="menu-list">
+            <a href="#" class="menu-item">
+                <div class="mi-left">
+                    <div class="mi-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <span>طلباتي</span>
+                </div>
+                <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="mi-left">
+                    <div class="mi-icon"><i class="fa-solid fa-heart"></i></div>
+                    <span>المفضلة</span>
+                </div>
+                <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="mi-left">
+                    <div class="mi-icon"><i class="fa-solid fa-headset"></i></div>
+                    <span>الدعم الفني والشكاوي</span>
+                </div>
+                <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
+            </a>
+            <a href="#" class="menu-item">
+                <div class="mi-left">
+                    <div class="mi-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <span>العناوين</span>
+                </div>
+                <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
+            </a>
+            <a href="#" class="menu-item logout">
+                <div class="mi-left">
+                    <div class="mi-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                    <span>تسجيل الخروج</span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Bottom Nav -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="categories.html" class="nav-item">
+            <i class="fa-solid fa-border-all"></i>
+            <span>الأقسام</span>
+        </a>
+        <a href="cart.html" class="nav-item cart-btn-nav">
+            <div class="nav-icon-wrapper">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="nav-badge">0</span>
+            </div>
+            <span>السلة</span>
+        </a>
+        <a href="account.html" class="nav-item active">
+            <i class="fa-regular fa-user"></i>
+            <span>حسابي</span>
+        </a>
+    </nav>
+</body>
+</html>
