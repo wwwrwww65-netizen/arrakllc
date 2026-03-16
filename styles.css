@@ -1,4 +1,4 @@
-﻿/* Color Palette & Variables - Salla Inspired */
+/* Color Palette & Variables - Salla Inspired */
 :root {
     --bg-main: #0c101b; /* Very dark blue from Take-Card */
     --bg-surface: #141a29;
@@ -1481,4 +1481,20 @@ h1, h2, h3, h4, h5, h6 {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+/* Sidebar/Menu Overlay */
+.side-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2000; opacity: 0; pointer-events: none; transition: 0.3s; backdrop-filter: blur(5px); }
+.side-menu-overlay.active { opacity: 1; pointer-events: all; }
+.side-menu { position: fixed; top: 0; right: -300px; width: 280px; height: 100%; background: var(--bg-surface); z-index: 2001; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; box-shadow: -5px 0 25px rgba(0,0,0,0.5); }
+.side-menu.active { right: 0; }
+.sm-header { padding: 25px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; }
+.sm-close { background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+.sm-links { padding: 20px 0; overflow-y: auto; flex: 1; }
+.sm-link { display: flex; align-items: center; gap: 15px; padding: 15px 20px; color: white; text-decoration: none; font-size: 1.1rem; transition: background 0.2s; }
+.sm-link:hover { background: rgba(255,255,255,0.05); color: var(--primary-light); }
+.sm-link i { width: 25px; text-align: center; color: var(--primary); }
+
+/* Toast Notification */
+.toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); background: #10b981; color: white; padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px; font-weight: bold; box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); z-index: 3000; opacity: 0; }
+.toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
