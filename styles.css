@@ -1,4 +1,4 @@
-/* Color Palette & Variables - Salla Inspired */
+﻿/* Color Palette & Variables - Salla Inspired */
 :root {
     --bg-main: #0c101b; /* Very dark blue from Take-Card */
     --bg-surface: #141a29;
@@ -561,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #0b1a20;
 }
 
-/* Games Top-up Section (شحن الالعاب) */
+/* Games Top-up Section (ط´ط­ظ† ط§ظ„ط§ظ„ط¹ط§ط¨) */
 .games-topup-section {
     position: relative;
     padding: 20px 16px 40px;
@@ -1044,7 +1044,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================================================
-   Product Page Styles (��� ���� - ����� �������)
+   Product Page Styles (تيك كارد - تصميم احترافي)
    ========================================================= */
 
 .product-page-body {
