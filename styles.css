@@ -1577,15 +1577,9 @@ h1, h2, h3, h4, h5, h6 {
     to { text-shadow: 0 0 15px var(--primary-light), 0 0 25px var(--primary-light); }
 }
 
-/* Floating Banners 3D Effect */
+/* Banner slides - NO float animation, static only */
 .banner-slide {
-    animation: float-3d 6s ease-in-out infinite;
-}
-
-@keyframes float-3d {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-6px); box-shadow: 0 15px 30px rgba(0,0,0,0.6); }
-    100% { transform: translateY(0); }
+    animation: none;
 }
 
 /* Add to Cart Ripple & Hover */
@@ -2524,4 +2518,92 @@ h1, h2, h3, h4, h5, h6 {
         min-width: 420px;
     }
     .banner-headline { font-size: 2rem !important; }
+}
+
+/* ============================================================
+   TOUCH HOVER - تفاعل اللمس على الجوال
+   ============================================================ */
+
+/* ضمان انتقال سلس لجميع العناصر التفاعلية */
+.product-card,
+.game-sq,
+.category-item-sq,
+.cat-icon,
+.inst-game-card,
+.add-to-cart-btn,
+.btn-animated,
+.nav-item,
+.sm-link,
+.social-links a {
+    transition: transform 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.22s ease,
+                border-color 0.22s ease,
+                background 0.22s ease,
+                color 0.22s ease !important;
+}
+
+/* بطاقات المنتجات */
+.product-card.touch-hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    border-color: rgba(0, 225, 255, 0.5) !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,225,255,0.2) !important;
+}
+
+/* أيقونات الألعاب */
+.game-sq.touch-hover {
+    transform: translateY(-5px) scale(1.06) !important;
+}
+.game-sq.touch-hover img {
+    box-shadow: 0 8px 25px rgba(92,36,255,0.5);
+    border-color: rgba(92,36,255,0.4) !important;
+}
+
+/* فئات التصفح */
+.category-item-sq.touch-hover .cat-icon {
+    transform: translateY(-8px) scale(1.12);
+}
+.category-item-sq.touch-hover .cat-glow-blue   { box-shadow: 0 10px 25px rgba(0,210,255,0.6), 0 0 0 1px rgba(0,210,255,0.25); }
+.category-item-sq.touch-hover .cat-glow-yellow { box-shadow: 0 10px 25px rgba(245,158,11,0.6), 0 0 0 1px rgba(245,158,11,0.25); }
+.category-item-sq.touch-hover .cat-glow-cyan   { box-shadow: 0 10px 25px rgba(0,164,239,0.6), 0 0 0 1px rgba(0,164,239,0.25); }
+.category-item-sq.touch-hover .cat-glow-pink   { box-shadow: 0 10px 25px rgba(255,51,102,0.6), 0 0 0 1px rgba(255,51,102,0.25); }
+.category-item-sq.touch-hover .cat-glow-purple { box-shadow: 0 10px 25px rgba(168,85,247,0.6), 0 0 0 1px rgba(168,85,247,0.25); }
+.category-item-sq.touch-hover .cat-glow-green  { box-shadow: 0 10px 25px rgba(16,185,129,0.6), 0 0 0 1px rgba(16,185,129,0.25); }
+
+/* بطاقات الشحن الأفقية */
+.inst-game-card.touch-hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(92,36,255,0.45);
+}
+
+/* زر إضافة للسلة */
+.add-to-cart-btn.touch-hover {
+    background: var(--primary) !important;
+    color: white !important;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(92,36,255,0.4);
+}
+
+/* أزرار البانر */
+.btn-animated.touch-hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* روابط القائمة السفلية */
+.nav-item.touch-hover {
+    color: var(--primary) !important;
+    transform: translateY(-2px);
+}
+
+/* روابط القائمة الجانبية */
+.sm-link.touch-hover {
+    background: rgba(255,255,255,0.06);
+    color: var(--primary-light) !important;
+}
+
+/* أيقونات التواصل الاجتماعي */
+.social-links a.touch-hover {
+    background: rgba(92,36,255,0.2);
+    color: var(--primary-light);
+    transform: translateY(-2px);
 }
