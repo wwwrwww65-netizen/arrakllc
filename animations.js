@@ -65,6 +65,7 @@
 
     slider.addEventListener('touchstart', () => clearInterval(autoTimer), { passive: true });
     slider.addEventListener('touchend', () => startAuto(), { passive: true });
+    slider.addEventListener('touchcancel', () => startAuto(), { passive: true });
 
     startAuto();
   }
