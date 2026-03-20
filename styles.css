@@ -374,7 +374,8 @@ h1, h2, h3, h4, h5, h6 {
     gap: 20px;
     overflow-x: auto;
     scrollbar-width: none;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 25px;
 }
 
 .h-scroll-container::-webkit-scrollbar {
