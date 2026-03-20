@@ -49,10 +49,12 @@
     let current = 0;
     let autoTimer;
 
+    // Set first slide as active exactly once at startup
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+
     function goTo(index) {
       current = (index + slides.length) % slides.length;
-      const slideWidth = slides[0].offsetWidth + 15;
-      slider.scrollTo({ left: current * slideWidth, behavior: 'smooth' });
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     }
 
@@ -193,79 +195,6 @@
       logoShimmer.appendChild(spark);
       setTimeout(() => spark.remove(), 700);
     }, 500);
-  }
-
-  // ═══════════════════════════════════════════════════════════
-  // ─── 10. MOBILE TOUCH HOVER SYSTEM ────────────────────────
-  //  يُشغّل تأثير hover فور لمس العنصر، ويُلغيه عند التمرير
-  // ═══════════════════════════════════════════════════════════
-  if (window.matchMedia('(pointer: coarse)').matches) {
-
-    const TOUCH_SELECTORS = [
-      '.product-card',
-      '.game-sq',
-      '.category-item-sq',
-      '.inst-game-card',
-      '.add-to-cart-btn',
-      '.btn-animated',
-      '.nav-item',
-      '.sm-link',
-      '.social-links a',
-    ];
-
-    let touchY0 = 0, touchX0 = 0;
-    let didScroll = false;
-    let activeEl = null;
-    let clearTimer = null;
-
-    function applyHover(el) {
-      if (activeEl && activeEl !== el) removeHover(activeEl);
-      el.classList.add('touch-hover');
-      activeEl = el;
-    }
-
-    function removeHover(el) {
-      if (!el) return;
-      el.classList.remove('touch-hover');
-      if (activeEl === el) activeEl = null;
-    }
-
-    const allTargets = document.querySelectorAll(TOUCH_SELECTORS.join(','));
-
-    allTargets.forEach(el => {
-      el.addEventListener('touchstart', (e) => {
-        touchY0 = e.touches[0].clientY;
-        touchX0 = e.touches[0].clientX;
-        didScroll = false;
-        clearTimeout(clearTimer);
-        applyHover(el);
-      }, { passive: true });
-
-      el.addEventListener('touchmove', (e) => {
-        if (
-          Math.abs(e.touches[0].clientY - touchY0) > 8 ||
-          Math.abs(e.touches[0].clientX - touchX0) > 8
-        ) {
-          didScroll = true;
-          removeHover(el);
-        }
-      }, { passive: true });
-
-      el.addEventListener('touchend', () => {
-        if (didScroll) {
-          removeHover(el);
-        } else {
-          clearTimer = setTimeout(() => removeHover(el), 300);
-        }
-      }, { passive: true });
-
-      el.addEventListener('touchcancel', () => removeHover(el), { passive: true });
-    });
-
-    // أزل أي hover نشط عند التمرير
-    window.addEventListener('scroll', () => {
-      if (activeEl) removeHover(activeEl);
-    }, { passive: true });
   }
 
 })();
