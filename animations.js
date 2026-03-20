@@ -50,8 +50,15 @@
     let autoTimer;
 
     function goTo(index) {
+      if (document.hidden) return; // Don't animate when tab is inactive
       current = (index + slides.length) % slides.length;
-      slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      
+      const targetSlide = slides[current];
+      const targetCenter = targetSlide.getBoundingClientRect().left + (targetSlide.offsetWidth / 2);
+      const sliderCenter = slider.getBoundingClientRect().left + (slider.offsetWidth / 2);
+      
+      slider.scrollBy({ left: targetCenter - sliderCenter, behavior: 'smooth' });
+      
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     }
 
