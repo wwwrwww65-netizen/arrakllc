@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>تيك كارد - تصميم مطابق</title>
-    <link rel="stylesheet" href="styles.css?v=10">
-    <!-- Google Fonts: Salla uses fonts similar to Tajawal, Almarai, or Cairo -->
+    <meta name="description" content="ARRAK LLC - متجر بطاقات الألعاب الرقمية، شحن الألعاب، بطاقات PlayStation، iTunes، Steam وأكثر">
+    <title>ARRAK LLC - بطاقات رقمية وشحن الألعاب</title>
+    <link rel="stylesheet" href="styles.css?v=11">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
     <!-- Aurora Animated Background -->
     <div class="aurora-wrap">
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
     </div>
+
+    <!-- Floating Particles -->
+    <div class="particles-canvas" id="particlesCanvas"></div>
+
+    <!-- Glowing Grid Overlay -->
+    <div class="grid-overlay"></div>
 
     <!-- Side Menu -->
     <div class="side-menu-overlay" id="menuOverlay"></div>
@@ -44,15 +54,16 @@
     </div>
 
     <!-- Mobile-First Header -->
-    <header class="header">
+    <header class="header" id="mainHeader">
         <div class="container header-inner">
-            <button class="icon-btn menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button class="icon-btn menu-btn" id="menuToggleBtn"><i class="fa-solid fa-bars"></i></button>
             <div class="logo">
-                <span class="logo-text">ARRAK <span class="highlight">LLC</span></span>
+                <span class="logo-text">ARRAK <span class="highlight logo-shimmer">LLC</span></span>
+                <div class="logo-glow-dot"></div>
             </div>
             <div class="header-actions">
-                <a href="account.html" class="icon-btn"><i class="fa-regular fa-user"></i></a>
-                <a href="cart.html" class="icon-btn cart-btn">
+                <a href="account.html" class="icon-btn header-icon-btn"><i class="fa-regular fa-user"></i></a>
+                <a href="cart.html" class="icon-btn cart-btn header-icon-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span class="badge">0</span>
                 </a>
@@ -61,61 +72,111 @@
         <div class="container">
             <div class="search-container">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" placeholder="ابحث عن منتج، تصنيف...">
+                <input type="text" id="searchInput" placeholder="ابحث عن منتج، تصنيف...">
+                <div class="search-pulse"></div>
             </div>
         </div>
     </header>
 
     <main>
+        <!-- Trust Bar (Animated) -->
+        <div class="trust-bar">
+            <div class="trust-bar-track">
+                <div class="trust-item"><i class="fa-solid fa-bolt"></i> تسليم فوري</div>
+                <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> دفع آمن 100%</div>
+                <div class="trust-item"><i class="fa-solid fa-headset"></i> دعم 24/7</div>
+                <div class="trust-item"><i class="fa-solid fa-star"></i> +10,000 عميل راضٍ</div>
+                <div class="trust-item"><i class="fa-solid fa-certificate"></i> معتمدون رسمياً</div>
+                <div class="trust-item"><i class="fa-solid fa-bolt"></i> تسليم فوري</div>
+                <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> دفع آمن 100%</div>
+                <div class="trust-item"><i class="fa-solid fa-headset"></i> دعم 24/7</div>
+                <div class="trust-item"><i class="fa-solid fa-star"></i> +10,000 عميل راضٍ</div>
+                <div class="trust-item"><i class="fa-solid fa-certificate"></i> معتمدون رسمياً</div>
+            </div>
+        </div>
+
         <!-- Top Banners Slider -->
-        <section class="banner-slider-section">
-            <div class="banner-slider">
+        <section class="banner-slider-section reveal-section">
+            <div class="banner-slider" id="bannerSlider">
                 <!-- Banner 1 -->
                 <div class="banner-slide" style="background: linear-gradient(135deg, #1f104d, #421886);">
+                    <div class="banner-bg-pattern"></div>
+                    <div class="banner-floating-orb"></div>
                     <div class="banner-content">
-                        <h2>التحدي بدأ !</h2>
+                        <span class="banner-tag"><i class="fa-solid fa-fire"></i> عرض محدود</span>
+                        <h2 class="banner-headline">التحدي بدأ!</h2>
                         <p>كن الأقوى بالالماسات الان</p>
-                        <button class="btn-sm">اشحنها الان</button>
+                        <button class="btn-sm btn-animated"><i class="fa-solid fa-bolt"></i> اشحنها الان</button>
+                    </div>
+                    <div class="banner-deco-circles">
+                        <span></span><span></span><span></span>
                     </div>
                 </div>
                 <!-- Banner 2 -->
                 <div class="banner-slide" style="background: linear-gradient(135deg, #091325, #112d5e);">
+                    <div class="banner-bg-pattern"></div>
+                    <div class="banner-floating-orb" style="background: rgba(0,225,255,0.3);"></div>
                     <div class="banner-content">
-                        <h2>عروض حصرية</h2>
-                        <p>احصل على أفضل الأسعار يوميا</p>
-                        <button class="btn-sm">اكتشف المزيد</button>
+                        <span class="banner-tag"><i class="fa-solid fa-gem"></i> حصري</span>
+                        <h2 class="banner-headline">عروض حصرية</h2>
+                        <p>احصل على أفضل الأسعار يوميًا</p>
+                        <button class="btn-sm btn-animated"><i class="fa-solid fa-arrow-left"></i> اكتشف المزيد</button>
+                    </div>
+                    <div class="banner-deco-circles">
+                        <span></span><span></span><span></span>
                     </div>
                 </div>
+                <!-- Banner 3 -->
+                <div class="banner-slide" style="background: linear-gradient(135deg, #0d1f1a, #0a3d2e);">
+                    <div class="banner-bg-pattern"></div>
+                    <div class="banner-floating-orb" style="background: rgba(16,185,129,0.3);"></div>
+                    <div class="banner-content">
+                        <span class="banner-tag"><i class="fa-solid fa-percent"></i> خصم</span>
+                        <h2 class="banner-headline">وفر أكثر اليوم</h2>
+                        <p>خصومات على بطاقات الألعاب</p>
+                        <button class="btn-sm btn-animated"><i class="fa-solid fa-tag"></i> تسوق الآن</button>
+                    </div>
+                    <div class="banner-deco-circles">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Banner Dots -->
+            <div class="banner-dots" id="bannerDots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
             </div>
         </section>
 
         <!-- Categories Horizontal Scroll -->
-        <section class="categories-scroll-section container">
+        <section class="categories-scroll-section container reveal-section">
+            <div class="section-label"><i class="fa-solid fa-border-all"></i> التصنيفات</div>
             <div class="h-scroll-container">
-                <div class="category-item-sq">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #1f104d, #421886);"><i class="fa-solid fa-gem" style="color:#00d2ff;"></i></div>
+                <a href="categories.html" class="category-item-sq">
+                    <div class="cat-icon cat-glow-blue" style="background: linear-gradient(135deg, #1f104d, #3a0ca3);"><i class="fa-solid fa-gem" style="color:#00d2ff;"></i></div>
                     <span>شحن الألعاب</span>
-                </div>
-                <div class="category-item-sq">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #1f104d, #421886);"><i class="fa-solid fa-envelope-open-text" style="color:#f59e0b;"></i></div>
+                </a>
+                <a href="categories.html" class="category-item-sq">
+                    <div class="cat-icon cat-glow-yellow" style="background: linear-gradient(135deg, #2d1a00, #7c4f00);"><i class="fa-solid fa-envelope-open-text" style="color:#f59e0b;"></i></div>
                     <span>بطاقات الألعاب</span>
-                </div>
-                <div class="category-item-sq">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #1f104d, #421886);"><i class="fa-solid fa-gamepad" style="color:#00a4ef;"></i></div>
+                </a>
+                <a href="categories.html" class="category-item-sq">
+                    <div class="cat-icon cat-glow-cyan" style="background: linear-gradient(135deg, #00144d, #003580);"><i class="fa-solid fa-gamepad" style="color:#00a4ef;"></i></div>
                     <span>منصات الألعاب</span>
-                </div>
-                <div class="category-item-sq">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #1f104d, #421886);"><i class="fa-solid fa-comments" style="color:#ff3366;"></i></div>
+                </a>
+                <a href="categories.html" class="category-item-sq">
+                    <div class="cat-icon cat-glow-pink" style="background: linear-gradient(135deg, #3a0020, #7a0040);"><i class="fa-solid fa-comments" style="color:#ff3366;"></i></div>
                     <span>لايف شات</span>
-                </div>
-                <div class="category-item-sq">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #1f104d, #421886);"><i class="fa-solid fa-bag-shopping" style="color:#a855f7;"></i></div>
+                </a>
+                <a href="categories.html" class="category-item-sq">
+                    <div class="cat-icon cat-glow-purple" style="background: linear-gradient(135deg, #2e0050, #5b0098);"><i class="fa-solid fa-bag-shopping" style="color:#a855f7;"></i></div>
                     <span>المتاجر الرقمية</span>
-                </div>
-                <div class="category-item-sq">
-                    <div class="cat-icon" style="background: linear-gradient(135deg, #1f104d, #421886);"><i class="fa-solid fa-wand-magic-sparkles" style="color:#10b981;"></i></div>
+                </a>
+                <a href="categories.html" class="category-item-sq">
+                    <div class="cat-icon cat-glow-green" style="background: linear-gradient(135deg, #002a1a, #005435);"><i class="fa-solid fa-wand-magic-sparkles" style="color:#10b981;"></i></div>
                     <span>اشتراكات</span>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -202,10 +263,10 @@
         </section>
 
         <!-- Games Top-up Section -->
-        <section class="games-topup-section container">
+        <section class="games-topup-section container reveal-section">
             <div class="string-lights"></div>
             <div class="topup-title-wrapper">
-                <div class="topup-title">شحن الالعاب</div>
+                <div class="topup-title"><i class="fa-solid fa-gamepad"></i> شحن الالعاب</div>
             </div>
             
             <div class="games-grid-3x3">
@@ -249,9 +310,9 @@
         </section>
 
         <!-- Best Sellers Grid -->
-        <section class="products-section container">
+        <section class="products-section container reveal-section">
             <div class="section-header">
-                <h2 class="section-title">الأكثر مبيعاً</h2>
+                <h2 class="section-title">🏆 الأكثر مبيعاً</h2>
                 <a href="#" class="view-all">عرض الكل <i class="fa-solid fa-angle-left"></i></a>
             </div>
             
@@ -325,20 +386,26 @@
         </section>
 
         <!-- Image Break Banner -->
-        <section class="promo-banner container">
-            <div class="promo-inner">
+        <section class="promo-banner container reveal-section">
+            <div class="promo-inner promo-inner-animated">
+                <div class="promo-floating-icon"><i class="fa-solid fa-tv"></i></div>
                 <div class="promo-text">
-                    <h2>لا توقف مشاهدة</h2>
-                    <p>اطلب و استمتع باستخدام برامجك المفضلة بأسعار حصرية</p>
-                    <a href="#" class="promo-link">اكتشف المزيد <i class="fa-solid fa-angle-left"></i></a>
+                    <span class="promo-eyebrow">اشتراكات ترفيهية</span>
+                    <h2>لا توقف المشاهدة <span class="promo-spark">✨</span></h2>
+                    <p>اطلب واستمتع باستخدام برامجك المفضلة بأسعار حصرية</p>
+                    <a href="#" class="promo-link"><span>اكتشف المزيد</span> <i class="fa-solid fa-angle-left"></i></a>
+                </div>
+                <div class="promo-orbs">
+                    <div class="promo-orb-1"></div>
+                    <div class="promo-orb-2"></div>
                 </div>
             </div>
         </section>
 
          <!-- Software Keys Grid -->
-         <section class="products-section container">
+         <section class="products-section container reveal-section">
             <div class="section-header">
-                <h2 class="section-title">الاكثر مبيعاً في مفاتيح البرامج</h2>
+                <h2 class="section-title">💎 الأكثر مبيعاً في مفاتيح البرامج</h2>
             </div>
             
             <div class="products-grid">
@@ -451,9 +518,11 @@
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/" class="whatsapp-float">
+        <div class="whatsapp-pulse-ring"></div>
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
