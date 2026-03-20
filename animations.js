@@ -49,12 +49,9 @@
     let current = 0;
     let autoTimer;
 
-    // Set first slide as active exactly once at startup
-    slides.forEach((s, i) => s.classList.toggle('active', i === current));
-
     function goTo(index) {
       current = (index + slides.length) % slides.length;
-      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      slides[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       dots.forEach((d, i) => d.classList.toggle('active', i === current));
     }
 

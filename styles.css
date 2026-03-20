@@ -302,11 +302,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-slider {
-    position: relative;
-    width: 100%;
-    height: 180px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 10px;
 }
 
 .banner-slider::-webkit-scrollbar {
@@ -314,22 +315,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-slide {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
-    z-index: 1;
+    min-width: 85%;
+    max-width: 400px;
+    height: 180px;
+    border-radius: var(--radius-md);
+    scroll-snap-align: center;
     display: flex;
     align-items: center;
     padding: 25px;
+    position: relative;
+    overflow: hidden;
     box-shadow: var(--shadow-main);
-}
-
-.banner-slide.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 2;
+    flex-shrink: 0;
 }
 
 .banner-slide::before {
@@ -2524,6 +2521,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
     .trust-bar-track { animation-duration: 30s; }
+    .banner-slide { min-width: 420px; }
     .banner-headline { font-size: 2rem !important; }
 }
 
