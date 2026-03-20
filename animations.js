@@ -28,18 +28,20 @@
     }
   }, { passive: true });
 
-  // ─── 3. FLOATING PARTICLES SYSTEM ──────────────────────────
+  // ─── 3. CRYSTAL BUBBLES SYSTEM ──────────────────────────
   const canvas = document.getElementById('particlesCanvas');
   if (canvas) {
     const colors = ['rgba(92,36,255,', 'rgba(0,225,255,', 'rgba(236,72,153,', 'rgba(16,185,129,'];
-    for (let i = 0; i < 28; i++) {
+    // تقليل عدد الفقاعات إلى 12 لمنع الازدحام
+    for (let i = 0; i < 12; i++) {
       const p = document.createElement('div');
       p.className = 'particle-dot';
-      const size = Math.random() * 20 + 8; // 8px to 28px
+      const size = Math.random() * 18 + 8; // 8px to 26px
       const color = colors[Math.floor(Math.random() * colors.length)];
       const opacity = Math.random() * 0.4 + 0.1;
       const duration = Math.random() * 15 + 10;
-      const delay = Math.random() * 10;
+      // استخدام delay بالسالب يضمن أن المتصفح قد "بدأ" الأنيمشن مسبقاً بفترات متفاوتة، فتتوزع كحلقة لانهائية متكاملة بلا دفعات مقطوعة
+      const delay = -(Math.random() * 30);
       
       p.style.cssText = `
         width: ${size}px;
