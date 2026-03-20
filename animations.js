@@ -116,9 +116,7 @@
         const valEl = box.querySelector('.time-val');
         const newVal = String(vals[i]).padStart(2, '0');
         if (valEl && valEl.textContent !== newVal) {
-          valEl.classList.add('flip-anim');
           valEl.textContent = newVal;
-          setTimeout(() => valEl.classList.remove('flip-anim'), 400);
         }
       });
     }

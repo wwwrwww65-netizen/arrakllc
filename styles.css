@@ -1999,10 +1999,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .trust-bar-track {
     display: flex;
-    gap: 50px;
-    animation: ticker-slide 22s linear infinite;
-    white-space: nowrap;
     width: max-content;
+}
+
+.ticker-group {
+    display: flex;
+    gap: 50px;
+    padding-right: 50px;
+    flex-shrink: 0;
+    animation: ticker-slide 22s linear infinite;
 }
 
 .trust-item {
@@ -2023,7 +2028,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes ticker-slide {
     0%   { transform: translateX(0); }
-    100% { transform: translateX(50%); }
+    100% { transform: translateX(100%); }
 }
 
 /* ─── 7. ENHANCED BANNER SLIDES ──────────────────────────── */
