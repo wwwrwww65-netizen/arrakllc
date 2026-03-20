@@ -2245,7 +2245,7 @@ h1, h2, h3, h4, h5, h6 {
     0%   { transform: translateY(0) scale(0); opacity: 0; }
     20%  { opacity: 1; }
     80%  { opacity: 0.4; }
-    100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+    100% { transform: translateY(-2500px) scale(1.5); opacity: 0; }
 }
 
 /* ─── 12. SCROLL REVEAL SYSTEM ───────────────────────────── */
