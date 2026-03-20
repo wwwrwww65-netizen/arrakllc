@@ -5,24 +5,28 @@
 (function () {
   'use strict';
 
-  // ─── 1. SCROLL PROGRESS BAR ───────────────────────────────
+  // ─── 1. SCROLL PROGRESS BAR & HEADER ──────────────────────
   const progressBar = document.getElementById('scrollProgressBar');
-  if (progressBar) {
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      progressBar.style.width = progress + '%';
-    }, { passive: true });
-  }
-
-  // ─── 2. HEADER SCROLL SHRINK ───────────────────────────────
   const header = document.getElementById('mainHeader');
-  if (header) {
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('header-scrolled', window.scrollY > 60);
-    }, { passive: true });
-  }
+  let scrollRAF = false;
+
+  window.addEventListener('scroll', () => {
+    if (!scrollRAF) {
+      window.requestAnimationFrame(() => {
+        const scrollTop = document.documentElement.scrollTop;
+        if (progressBar) {
+          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const progress = (scrollTop / scrollHeight) * 100;
+          progressBar.style.width = progress + '%';
+        }
+        if (header) {
+          header.classList.toggle('header-scrolled', scrollTop > 60);
+        }
+        scrollRAF = false;
+      });
+      scrollRAF = true;
+    }
+  }, { passive: true });
 
   // ─── 3. FLOATING PARTICLES SYSTEM ──────────────────────────
   const canvas = document.getElementById('particlesCanvas');
@@ -235,13 +239,17 @@
       runTouchHover(e.touches[0].clientX, e.touches[0].clientY);
     }, { passive: true });
 
+    let lastTouchTime = 0;
     document.addEventListener('touchmove', (e) => {
-      if (!scrollTicking) {
+      const now = Date.now();
+      // Throttle heavy DOM lookups to 40ms to keep 60fps scrolling perfectly smooth
+      if (now - lastTouchTime > 40 && !scrollTicking) {
         window.requestAnimationFrame(() => {
           runTouchHover(e.touches[0].clientX, e.touches[0].clientY);
           scrollTicking = false;
         });
         scrollTicking = true;
+        lastTouchTime = now;
       }
     }, { passive: true });
 
