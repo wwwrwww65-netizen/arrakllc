@@ -35,12 +35,24 @@
     for (let i = 0; i < 28; i++) {
       const p = document.createElement('div');
       p.className = 'particle-dot';
-      const size = Math.random() * 4 + 2;
+      const size = Math.random() * 20 + 8; // 8px to 28px
       const color = colors[Math.floor(Math.random() * colors.length)];
-      const opacity = Math.random() * 0.5 + 0.2;
-      const duration = Math.random() * 14 + 8;
+      const opacity = Math.random() * 0.4 + 0.1;
+      const duration = Math.random() * 15 + 10;
       const delay = Math.random() * 10;
-      p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-${size}px;background:radial-gradient(circle,${color}${opacity}) 0%,transparent 70%);animation:particle-rise ${duration}s ${delay}s infinite ease-in;will-change: transform;pointer-events: none;`;
+      
+      p.style.cssText = `
+        width: ${size}px;
+        height: ${size}px;
+        left: ${Math.random()*100}%;
+        bottom: -${size + 20}px;
+        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+        box-shadow: inset -2px -2px 6px rgba(0,0,0,0.2), inset 2px 2px 6px rgba(255,255,255,0.5), 0 0 10px ${color}${opacity});
+        border: 1px solid rgba(255,255,255,0.15);
+        animation: particle-rise ${duration}s ${delay}s infinite ease-in-out;
+        will-change: transform;
+        pointer-events: none;
+      `;
       canvas.appendChild(p);
     }
   }
