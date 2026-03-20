@@ -195,11 +195,72 @@
   if (logoShimmer) {
     setInterval(() => {
       const spark = document.createElement('span');
-      spark.className = 'logo-spark';
       spark.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;`;
       logoShimmer.appendChild(spark);
       setTimeout(() => spark.remove(), 700);
     }, 500);
+  }
+
+  // ─── 10. MOBILE GLIDE HOVER ──────────────────────────────
+  // يحاكي تأثير الماوس تماماً عند تمرير الإصبع على الهاتف
+  if (window.matchMedia('(pointer: coarse)').matches) {
+    let activeEl = null;
+    let fallbackTimer = null;
+    let scrollTicking = false;
+    let isTouching = false;
+
+    const HOVER_SELECTORS = '.product-card, .game-sq, .category-item-sq, .inst-game-card, .btn-animated, .nav-item, .add-to-cart-btn';
+
+    function runTouchHover(x, y) {
+      const el = document.elementFromPoint(x, y);
+      const target = el ? el.closest(HOVER_SELECTORS) : null;
+      
+      if (activeEl !== target) {
+        if (activeEl) activeEl.classList.remove('touch-hover');
+        if (target) target.classList.add('touch-hover');
+        activeEl = target;
+      }
+    }
+
+    function cancelTouch() {
+      if (activeEl) {
+        activeEl.classList.remove('touch-hover');
+        activeEl = null;
+      }
+    }
+
+    document.addEventListener('touchstart', (e) => {
+      isTouching = true;
+      clearTimeout(fallbackTimer);
+      runTouchHover(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    document.addEventListener('touchmove', (e) => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          runTouchHover(e.touches[0].clientX, e.touches[0].clientY);
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', () => {
+      isTouching = false;
+      clearTimeout(fallbackTimer);
+      fallbackTimer = setTimeout(cancelTouch, 400); // إبقاء التأثير قليلاً بعد الرفع
+    }, { passive: true });
+    
+    document.addEventListener('touchcancel', () => {
+      isTouching = false;
+      cancelTouch();
+    }, { passive: true });
+
+    window.addEventListener('scroll', () => {
+      if (!isTouching) {
+        cancelTouch();
+      }
+    }, { passive: true });
   }
 
 })();
