@@ -40,7 +40,7 @@
       const opacity = Math.random() * 0.5 + 0.2;
       const duration = Math.random() * 14 + 8;
       const delay = Math.random() * 10;
-      p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-${size}px;background:radial-gradient(circle,${color}${opacity}) 0%,transparent 70%);animation:particle-rise ${duration}s ${delay}s infinite ease-in;`;
+      p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-${size}px;background:radial-gradient(circle,${color}${opacity}) 0%,transparent 70%);animation:particle-rise ${duration}s ${delay}s infinite ease-in;will-change: transform;pointer-events: none;`;
       canvas.appendChild(p);
     }
   }

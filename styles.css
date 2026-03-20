@@ -61,9 +61,10 @@ body {
     top: -200px;
     right: -150px;
     border-radius: 50%;
-    background: radial-gradient(circle at center, rgba(92, 36, 255, 0.45) 0%, rgba(92, 36, 255, 0.15) 40%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(92, 36, 255, 0.45) 0%, rgba(92, 36, 255, 0.15) 30%, transparent 60%);
     animation: aurora-drift 14s ease-in-out infinite alternate;
-    filter: blur(40px);
+    will-change: transform;
+    pointer-events: none;
 }
 
 .aurora-wrap::after {
@@ -74,15 +75,17 @@ body {
     bottom: -100px;
     left: -100px;
     border-radius: 50%;
-    background: radial-gradient(circle at center, rgba(0, 225, 255, 0.35) 0%, rgba(0, 225, 255, 0.1) 40%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(0, 225, 255, 0.35) 0%, rgba(0, 225, 255, 0.1) 30%, transparent 60%);
     animation: aurora-drift2 18s ease-in-out infinite alternate;
-    filter: blur(50px);
+    will-change: transform;
+    pointer-events: none;
 }
 
 .aurora-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(60px);
+    will-change: transform;
+    pointer-events: none;
 }
 
 .aurora-orb:nth-child(1) {
@@ -189,16 +192,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 40vw;
     height: 40vw;
     border-radius: 50%;
-    filter: blur(100px);
     z-index: -1;
     opacity: 0.15;
     pointer-events: none;
+    will-change: transform;
 }
 
 .top-glow {
     top: -10vw;
     right: -10vw;
-    background: var(--primary);
+    background: radial-gradient(circle at center, var(--primary) 0%, transparent 60%);
 }
 
 .mid-glow {
@@ -876,9 +879,10 @@ h1, h2, h3, h4, h5, h6 {
     left: -50px;
     width: 150px;
     height: 150px;
-    background: var(--primary);
-    filter: blur(80px);
+    background: radial-gradient(circle at center, var(--primary) 0%, transparent 60%);
     opacity: 0.4;
+    pointer-events: none;
+    will-change: transform;
 }
 
 .promo-text {
@@ -1174,10 +1178,11 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 150px;
     height: 150px;
-    background: var(--primary);
-    filter: blur(60px);
+    background: radial-gradient(circle at center, var(--primary) 0%, transparent 60%);
     z-index: 0;
     opacity: 0.5;
+    pointer-events: none;
+    will-change: transform;
 }
 
 .p-img {
@@ -2383,22 +2388,22 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 200px; height: 200px;
     top: -80px; left: -60px;
-    border-radius: 50%;
-    background: var(--primary);
-    filter: blur(70px);
+    background: radial-gradient(circle at center, var(--primary) 0%, transparent 60%);
     opacity: 0.2;
     animation: promo-orb-drift 8s ease-in-out infinite alternate;
+    will-change: transform;
+    pointer-events: none;
 }
 
 .promo-orb-2 {
     position: absolute;
     width: 150px; height: 150px;
     bottom: -60px; right: 20%;
-    border-radius: 50%;
-    background: var(--secondary);
-    filter: blur(60px);
+    background: radial-gradient(circle at center, var(--secondary) 0%, transparent 60%);
     opacity: 0.15;
     animation: promo-orb-drift 10s 2s ease-in-out infinite alternate;
+    will-change: transform;
+    pointer-events: none;
 }
 
 @keyframes promo-orb-drift {
