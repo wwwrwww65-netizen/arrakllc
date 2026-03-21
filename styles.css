@@ -2921,7 +2921,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Floating Bottom Cart Bar */
 .sticky-bottom-bar {
     position: fixed;
-    bottom: 20px;
+    bottom: 80px;
     left: 20px;
     right: 20px;
     background: rgba(16, 21, 40, 0.8);
