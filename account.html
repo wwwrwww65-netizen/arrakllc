@@ -29,12 +29,21 @@
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
     <!-- Aurora Animated Background -->
     <div class="aurora-wrap">
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
     </div>
+
+    <!-- Floating Bubbles -->
+    <div class="particles-canvas" id="particlesCanvas"></div>
+
+    <!-- Glowing Grid Overlay -->
+    <div class="grid-overlay"></div>
 
     <div class="bg-glow top-glow"></div>
     <div class="bg-glow mid-glow" style="top: 50%;"></div>
@@ -53,7 +62,7 @@
 
     <main class="container" style="padding-bottom: 100px; margin-top: 10px;">
         <!-- Profile Header -->
-        <div class="profile-header">
+        <div class="profile-header touch-hover" data-tilt>
             <div class="avatar-wrap">
                 <i class="fa-solid fa-user"></i>
                 <div class="vip-badge">VIP</div>
@@ -65,7 +74,7 @@
         </div>
 
         <!-- Wallet Card -->
-        <div class="wallet-card">
+        <div class="wallet-card touch-hover" data-tilt>
             <div>
                 <span class="w-lbl">رصيد المحفظة</span>
                 <span class="w-amount">150.00 <span style="font-size:1rem;">ر.س</span></span>
@@ -75,35 +84,35 @@
 
         <!-- Menu List -->
         <div class="menu-list">
-            <a href="#" class="menu-item">
+            <a href="#" class="menu-item touch-hover">
                 <div class="mi-left">
                     <div class="mi-icon"><i class="fa-solid fa-box-open"></i></div>
                     <span>طلباتي</span>
                 </div>
                 <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
             </a>
-            <a href="#" class="menu-item">
+            <a href="#" class="menu-item touch-hover">
                 <div class="mi-left">
                     <div class="mi-icon"><i class="fa-solid fa-heart"></i></div>
                     <span>المفضلة</span>
                 </div>
                 <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
             </a>
-            <a href="#" class="menu-item">
+            <a href="#" class="menu-item touch-hover">
                 <div class="mi-left">
                     <div class="mi-icon"><i class="fa-solid fa-headset"></i></div>
                     <span>الدعم الفني والشكاوي</span>
                 </div>
                 <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
             </a>
-            <a href="#" class="menu-item">
+            <a href="#" class="menu-item touch-hover">
                 <div class="mi-left">
                     <div class="mi-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <span>العناوين</span>
                 </div>
                 <i class="fa-solid fa-angle-left" style="color:var(--text-muted)"></i>
             </a>
-            <a href="#" class="menu-item logout">
+            <a href="#" class="menu-item logout touch-hover">
                 <div class="mi-left">
                     <div class="mi-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
                     <span>تسجيل الخروج</span>
@@ -134,5 +143,7 @@
             <span>حسابي</span>
         </a>
     </nav>
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>

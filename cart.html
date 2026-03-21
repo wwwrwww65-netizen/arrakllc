@@ -27,12 +27,21 @@
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
     <!-- Aurora Animated Background -->
     <div class="aurora-wrap">
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
     </div>
+
+    <!-- Floating Bubbles -->
+    <div class="particles-canvas" id="particlesCanvas"></div>
+
+    <!-- Glowing Grid Overlay -->
+    <div class="grid-overlay"></div>
 
     <div class="bg-glow top-glow"></div>
 
@@ -51,8 +60,8 @@
         
         <div class="cart-items">
             <!-- Sample Item -->
-            <div class="cart-item">
-                <button class="remove-btn" title="حذف"><i class="fa-solid fa-trash-can"></i></button>
+            <div class="cart-item touch-hover" data-tilt>
+                <button class="remove-btn touch-hover" title="حذف"><i class="fa-solid fa-trash-can"></i></button>
                 <img src="https://cdn.salla.sa/form-builder/0g0huFYTMdfy4WucpFHfEjvxZKufwBUXt6O42hH9.png" class="cart-img" alt="Product">
                 <div class="cart-details">
                     <h3 class="c-title">اشتراك واتش ات Watch IT | شهر واحد</h3>
@@ -80,7 +89,7 @@
                 <span style="color:#ff3366;">40.25 ر.س</span>
             </div>
             
-            <button class="checkout-btn"><i class="fa-solid fa-credit-card"></i> إتمام الطلب</button>
+            <button class="checkout-btn touch-hover"><i class="fa-solid fa-credit-card"></i> إتمام الطلب</button>
         </div>
     </main>
 
@@ -106,5 +115,7 @@
             <span>حسابي</span>
         </a>
     </nav>
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
