@@ -115,102 +115,101 @@
         <!-- Sub Categories Horizontal Filters -->
         <section class="container" style="margin-bottom: 20px;">
             <div class="subcategories-scroll h-scroll-container">
-                <div class="sub-pill"><i class="fa-solid fa-user text-info"></i> حسابات ببجي</div>
-                <div class="sub-pill"><i class="fa-solid fa-fire text-danger"></i> شعبيات ببجي</div>
-                <div class="sub-pill"><i class="fa-solid fa-crown text-warning"></i> اشتراكات ببجي</div>
-                <div class="sub-pill"><i class="fa-solid fa-bolt text-success"></i> اشحنها بنفسك</div>
-                <div class="sub-pill active"><i class="fa-solid fa-gem text-primary"></i> نشحنها لك</div>
+                <button class="sub-pill"><i class="fa-solid fa-user text-info"></i> حسابات ببجي</button>
+                <button class="sub-pill"><i class="fa-solid fa-fire text-danger"></i> شعبيات ببجي</button>
+                <button class="sub-pill"><i class="fa-solid fa-crown text-warning"></i> اشتراكات ببجي</button>
+                <button class="sub-pill"><i class="fa-solid fa-bolt text-success"></i> اشحنها بنفسك</button>
+                <button class="sub-pill active"><i class="fa-solid fa-gem text-primary"></i> نشحنها لك</button>
             </div>
         </section>
 
         <!-- Dynamic Product Grid Section -->
-        <section class="container">
-            <div class="products-grid-2">
+        <section class="container reveal-section">
+            <div class="products-grid">
                 
                 <!-- Product 1 -->
-                <div class="v-product-card">
-                    <div class="v-img-wrapper">
-                        <!-- High Res Background Image typical for PUBG UC -->
-                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background">
-                        <span class="v-badge-fast">تسليم سريع</span>
-                        <div class="v-uc-overlay">
-                            <span class="v-uc-count">180</span> <span class="v-uc-label">شدة</span>
+                <div class="product-card" onclick="window.location.href='cart.html';" style="cursor: pointer;" data-tilt>
+                    <div class="product-img-wrapper" style="background:#0d1222;">
+                        <span class="discount-badge" style="background: linear-gradient(90deg, #10b981, #059669); border:none; box-shadow: 0 0 10px rgba(16,185,129,0.5);">تسليم سريع</span>
+                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background" style="width:100%; height:100%; object-fit:cover;">
+                        <div style="position:absolute; bottom:10px; left:10px; display:flex; gap:4px; align-items:baseline; text-shadow: 2px 2px 5px rgba(0,0,0,1); z-index:3;">
+                            <span style="font-size:1.4rem; font-weight:900; color:#fff;">180</span><span style="font-size:0.8rem; font-weight:700; color:#cbd5e1;">شدة</span>
                         </div>
                     </div>
-                    <div class="v-card-body">
-                        <div class="v-radio-row"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
-                        <h3 class="v-card-title">نشحنها لك 180 شدة</h3>
-                        <div class="v-price-row">
-                            <span class="v-old-price">14.99 ر.س</span>
-                            <span class="v-new-price">13.99 ر.س</span>
+                    <div class="product-details">
+                        <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:5px;"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
+                        <h3 class="product-title">نشحنها لك 180 شدة</h3>
+                        <div class="product-price">
+                            <span class="old-price">14.99 ر.س</span>
+                            <span class="new-price">13.99 ر.س</span>
                         </div>
-                        <button class="v-btn-add" onclick="document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
+                        <button class="add-to-cart-btn" onclick="event.stopPropagation(); document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
                             <i class="fa-solid fa-basket-shopping"></i> إضافة للسلة
                         </button>
                     </div>
                 </div>
 
                 <!-- Product 2 -->
-                <div class="v-product-card">
-                    <div class="v-img-wrapper">
-                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background">
-                        <span class="v-badge-fast">تسليم سريع</span>
-                        <div class="v-uc-overlay">
-                            <span class="v-uc-count">325</span> <span class="v-uc-label">شدة</span>
+                <div class="product-card" onclick="window.location.href='cart.html';" style="cursor: pointer;" data-tilt>
+                    <div class="product-img-wrapper" style="background:#0d1222;">
+                        <span class="discount-badge" style="background: linear-gradient(90deg, #10b981, #059669); border:none; box-shadow: 0 0 10px rgba(16,185,129,0.5);">تسليم سريع</span>
+                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background" style="width:100%; height:100%; object-fit:cover;">
+                        <div style="position:absolute; bottom:10px; left:10px; display:flex; gap:4px; align-items:baseline; text-shadow: 2px 2px 5px rgba(0,0,0,1); z-index:3;">
+                            <span style="font-size:1.4rem; font-weight:900; color:#fff;">325</span><span style="font-size:0.8rem; font-weight:700; color:#cbd5e1;">شدة</span>
                         </div>
                     </div>
-                    <div class="v-card-body">
-                        <div class="v-radio-row"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
-                        <h3 class="v-card-title">نشحنها لك 325 شدة</h3>
-                        <div class="v-price-row">
-                            <span class="v-old-price">22.99 ر.س</span>
-                            <span class="v-new-price">19.99 ر.س</span>
+                    <div class="product-details">
+                        <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:5px;"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
+                        <h3 class="product-title">نشحنها لك 325 شدة</h3>
+                        <div class="product-price">
+                            <span class="old-price">22.99 ر.س</span>
+                            <span class="new-price">19.99 ر.س</span>
                         </div>
-                        <button class="v-btn-add" onclick="document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
+                        <button class="add-to-cart-btn" onclick="event.stopPropagation(); document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
                             <i class="fa-solid fa-basket-shopping"></i> إضافة للسلة
                         </button>
                     </div>
                 </div>
 
                 <!-- Product 3 -->
-                <div class="v-product-card">
-                    <div class="v-img-wrapper">
-                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background">
-                        <span class="v-badge-fast">تسليم سريع</span>
-                        <div class="v-uc-overlay">
-                            <span class="v-uc-count">385</span> <span class="v-uc-label">شدة</span>
+                <div class="product-card" onclick="window.location.href='cart.html';" style="cursor: pointer;" data-tilt>
+                    <div class="product-img-wrapper" style="background:#0d1222;">
+                        <span class="discount-badge" style="background: linear-gradient(90deg, #10b981, #059669); border:none; box-shadow: 0 0 10px rgba(16,185,129,0.5);">تسليم سريع</span>
+                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background" style="width:100%; height:100%; object-fit:cover;">
+                        <div style="position:absolute; bottom:10px; left:10px; display:flex; gap:4px; align-items:baseline; text-shadow: 2px 2px 5px rgba(0,0,0,1); z-index:3;">
+                            <span style="font-size:1.4rem; font-weight:900; color:#fff;">385</span><span style="font-size:0.8rem; font-weight:700; color:#cbd5e1;">شدة</span>
                         </div>
                     </div>
-                    <div class="v-card-body">
-                        <div class="v-radio-row"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
-                        <h3 class="v-card-title">نشحنها لك 385 شدة</h3>
-                        <div class="v-price-row">
-                            <span class="v-old-price">30.99 ر.س</span>
-                            <span class="v-new-price">23.99 ر.س</span>
+                    <div class="product-details">
+                        <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:5px;"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
+                        <h3 class="product-title">نشحنها لك 385 شدة</h3>
+                        <div class="product-price">
+                            <span class="old-price">30.99 ر.س</span>
+                            <span class="new-price">23.99 ر.س</span>
                         </div>
-                        <button class="v-btn-add" onclick="document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
+                        <button class="add-to-cart-btn" onclick="event.stopPropagation(); document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
                             <i class="fa-solid fa-basket-shopping"></i> إضافة للسلة
                         </button>
                     </div>
                 </div>
 
                 <!-- Product 4 -->
-                <div class="v-product-card">
-                    <div class="v-img-wrapper">
-                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background">
-                        <span class="v-badge-fast">تسليم سريع</span>
-                        <div class="v-uc-overlay">
-                            <span class="v-uc-count">660</span> <span class="v-uc-label">شدة</span>
+                <div class="product-card" onclick="window.location.href='cart.html';" style="cursor: pointer;" data-tilt>
+                    <div class="product-img-wrapper" style="background:#0d1222;">
+                        <span class="discount-badge" style="background: linear-gradient(90deg, #10b981, #059669); border:none; box-shadow: 0 0 10px rgba(16,185,129,0.5);">تسليم سريع</span>
+                        <img src="https://cdn.salla.sa/NDVOD/8Ncv2bWP5BNUA4SEl8SrEQV2WxbCh6i8avYtHb1Q.png" alt="PUBG UC Background" style="width:100%; height:100%; object-fit:cover;">
+                        <div style="position:absolute; bottom:10px; left:10px; display:flex; gap:4px; align-items:baseline; text-shadow: 2px 2px 5px rgba(0,0,0,1); z-index:3;">
+                            <span style="font-size:1.4rem; font-weight:900; color:#fff;">660</span><span style="font-size:0.8rem; font-weight:700; color:#cbd5e1;">شدة</span>
                         </div>
                     </div>
-                    <div class="v-card-body">
-                        <div class="v-radio-row"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
-                        <h3 class="v-card-title">نشحنها لك 660 شدة</h3>
-                        <div class="v-price-row">
-                            <span class="v-old-price">39.99 ر.س</span>
-                            <span class="v-new-price">37.50 ر.س</span>
+                    <div class="product-details">
+                        <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:5px;"><i class="fa-regular fa-circle"></i> اختر البطاقة</div>
+                        <h3 class="product-title">نشحنها لك 660 شدة</h3>
+                        <div class="product-price">
+                            <span class="old-price">39.99 ر.س</span>
+                            <span class="new-price">37.50 ر.س</span>
                         </div>
-                        <button class="v-btn-add" onclick="document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
+                        <button class="add-to-cart-btn" onclick="event.stopPropagation(); document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
                             <i class="fa-solid fa-basket-shopping"></i> إضافة للسلة
                         </button>
                     </div>
@@ -220,41 +219,45 @@
         </section>
 
         <!-- Suggested Products (Horizontal Scroll) -->
-        <section class="container" style="margin-top: 40px;">
+        <section class="container reveal-section" style="margin-top: 40px;">
             <div class="section-label"><i class="fa-solid fa-star"></i> منتجات مقترحة</div>
             <div class="h-scroll-container">
-                <div class="v-product-card" style="min-width: 160px;">
-                    <div class="v-img-wrapper">
-                        <img src="https://cdn.salla.sa/NDVOD/HFMzHbwAZ9M7gEvRzmay9E4U9hMwGyoktGJdmdvw.png" alt="COD">
-                        <span class="v-badge-fast">تسليم سريع</span>
-                        <div class="v-uc-overlay">
-                            <span class="v-uc-count">420</span> <span class="v-uc-label">CP</span>
+                <div class="product-card" onclick="window.location.href='product.html';" style="cursor: pointer; min-width:220px;" data-tilt>
+                    <div class="product-img-wrapper">
+                        <img src="https://cdn.salla.sa/NDVOD/HFMzHbwAZ9M7gEvRzmay9E4U9hMwGyoktGJdmdvw.png" alt="COD" style="width:100%; height:100%; object-fit:cover;">
+                        <span class="discount-badge" style="background: linear-gradient(90deg, #10b981, #059669); border:none; box-shadow: 0 0 10px rgba(16,185,129,0.5);">تسليم سريع</span>
+                        <div style="position:absolute; bottom:10px; left:10px; display:flex; gap:4px; align-items:baseline; text-shadow: 2px 2px 5px rgba(0,0,0,1); z-index:3;">
+                            <span style="font-size:1.4rem; font-weight:900; color:#fff;">420</span><span style="font-size:0.8rem; font-weight:700; color:#cbd5e1;">CP</span>
                         </div>
                     </div>
-                    <div class="v-card-body">
-                        <h3 class="v-card-title">كول اوف ديوتي 420 نقطة</h3>
-                        <div class="v-price-row">
-                            <span class="v-old-price">22.99 ر.س</span>
-                            <span class="v-new-price">19.99 ر.س</span>
+                    <div class="product-details">
+                        <h3 class="product-title">كول اوف ديوتي 420 نقطة</h3>
+                        <div class="product-price">
+                            <span class="old-price">22.99 ر.س</span>
+                            <span class="new-price">19.99 ر.س</span>
                         </div>
-                        <button class="v-btn-add"><i class="fa-solid fa-basket-shopping"></i> إضافة للسلة</button>
+                        <button class="add-to-cart-btn" onclick="event.stopPropagation(); document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
+                            <i class="fa-solid fa-basket-shopping"></i> إضافة للسلة
+                        </button>
                     </div>
                 </div>
-                <div class="v-product-card" style="min-width: 160px;">
-                    <div class="v-img-wrapper">
-                        <img src="https://cdn.salla.sa/NDVOD/sFJfpfvJq1O2NDSO74bbsKN9VseASQA0OsA40iUG.png" alt="ML">
-                        <span class="v-badge-fast">تسليم سريع</span>
-                        <div class="v-uc-overlay">
-                            <span class="v-uc-count">245</span> <span class="v-uc-label">💎</span>
+                <div class="product-card" onclick="window.location.href='product.html';" style="cursor: pointer; min-width:220px;" data-tilt>
+                    <div class="product-img-wrapper">
+                        <img src="https://cdn.salla.sa/NDVOD/sFJfpfvJq1O2NDSO74bbsKN9VseASQA0OsA40iUG.png" alt="ML" style="width:100%; height:100%; object-fit:cover;">
+                        <span class="discount-badge" style="background: linear-gradient(90deg, #10b981, #059669); border:none; box-shadow: 0 0 10px rgba(16,185,129,0.5);">تسليم سريع</span>
+                        <div style="position:absolute; bottom:10px; left:10px; display:flex; gap:4px; align-items:baseline; text-shadow: 2px 2px 5px rgba(0,0,0,1); z-index:3;">
+                            <span style="font-size:1.4rem; font-weight:900; color:#fff;">245</span><span style="font-size:0.8rem; font-weight:700; color:#cbd5e1;">💎</span>
                         </div>
                     </div>
-                    <div class="v-card-body">
-                        <h3 class="v-card-title">موبايل ليجيندز 245 دياموند</h3>
-                        <div class="v-price-row">
-                            <span class="v-old-price">18.99 ر.س</span>
-                            <span class="v-new-price">15.99 ر.س</span>
+                    <div class="product-details">
+                        <h3 class="product-title">موبايل ليجيندز 245 دياموند</h3>
+                        <div class="product-price">
+                            <span class="old-price">18.99 ر.س</span>
+                            <span class="new-price">15.99 ر.س</span>
                         </div>
-                        <button class="v-btn-add"><i class="fa-solid fa-basket-shopping"></i> إضافة للسلة</button>
+                        <button class="add-to-cart-btn" onclick="event.stopPropagation(); document.getElementById('cartToast').classList.add('show');setTimeout(()=>document.getElementById('cartToast').classList.remove('show'),3000)">
+                            <i class="fa-solid fa-basket-shopping"></i> إضافة للسلة
+                        </button>
                     </div>
                 </div>
             </div>
