@@ -20,12 +20,21 @@
     </style>
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
     <!-- Aurora Animated Background -->
     <div class="aurora-wrap">
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
         <div class="aurora-orb"></div>
     </div>
+
+    <!-- Floating Bubbles -->
+    <div class="particles-canvas" id="particlesCanvas"></div>
+
+    <!-- Glowing Grid Overlay -->
+    <div class="grid-overlay"></div>
 
     <div class="bg-glow top-glow"></div>
 
@@ -54,27 +63,27 @@
         <h1 class="page-title">تصفح الأقسام</h1>
         
         <div class="categories-grid">
-            <a href="#" class="cat-card">
+            <a href="pubg.html" class="cat-card touch-hover" data-tilt>
                 <div class="cat-icon-wrapper"><i class="fa-solid fa-gamepad"></i></div>
                 <span class="cat-title">شحن الألعاب</span>
             </a>
-            <a href="#" class="cat-card purple">
+            <a href="pubg.html" class="cat-card purple touch-hover" data-tilt>
                 <div class="cat-icon-wrapper"><i class="fa-solid fa-tv"></i></div>
                 <span class="cat-title">بطاقات البث المنزلي</span>
             </a>
-            <a href="#" class="cat-card green">
+            <a href="pubg.html" class="cat-card green touch-hover" data-tilt>
                 <div class="cat-icon-wrapper"><i class="fa-solid fa-music"></i></div>
                 <span class="cat-title">البرامج الصوتية</span>
             </a>
-            <a href="#" class="cat-card yellow">
+            <a href="pubg.html" class="cat-card yellow touch-hover" data-tilt>
                 <div class="cat-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
                 <span class="cat-title">برامج الحماية</span>
             </a>
-            <a href="#" class="cat-card">
+            <a href="pubg.html" class="cat-card touch-hover" data-tilt>
                 <div class="cat-icon-wrapper"><i class="fa-brands fa-apple"></i></div>
                 <span class="cat-title">بطاقات آبل</span>
             </a>
-            <a href="#" class="cat-card purple">
+            <a href="pubg.html" class="cat-card purple touch-hover" data-tilt>
                 <div class="cat-icon-wrapper"><i class="fa-brands fa-playstation"></i></div>
                 <span class="cat-title">بلايستيشن & اكسبوكس</span>
             </a>
@@ -103,5 +112,7 @@
             <span>حسابي</span>
         </a>
     </nav>
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
 </body>
 </html>
